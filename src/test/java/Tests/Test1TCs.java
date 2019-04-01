@@ -1,26 +1,59 @@
 package Tests;
 
 import Pages.Test1Page;
+import io.qameta.allure.*;
+import org.apache.log4j.FileAppender;
+import org.apache.log4j.Logger;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
+@Epic("Regression")
+@Feature("Feature TCs")
+public class Test1TCs extends BaseTest {
 
-public class Test1TCs {
+    WebDriver driver;
+    Logger log=Logger.getLogger(Test1TCs.class.getName());
+
 
     Test1Page obj;
-    @BeforeSuite
-    public void beforeSuiteActions()
-    {
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\MP\\Downloads\\chromedriver_win32\\chromedriver.exe");
-        WebDriver driver=new ChromeDriver();
+    public Test1TCs() {
+        driver=getDriver();
         obj=new Test1Page(driver);
-
     }
 
-    @Test
+        @Step("T11 Step")
+        @Severity(SeverityLevel.BLOCKER)
+        @Feature("T11 Feature")
+        @Description("T11 Description")
+        @Test(description = "T11")
     public void T11()
     {
         obj.loadSite();
+        log.info("Site Loaded");
+        saveScreenshot(((TakesScreenshot)getDriver()).getScreenshotAs(OutputType.BYTES));
+
+    }
+
+    @Step("T12 Step")
+    @Severity(SeverityLevel.BLOCKER)
+    @Feature("T11 Feature")
+    @Description("T12 Description")
+    @Test(description = "T12")
+    public void T12()
+    {
+        obj.loadSite();
+        log.info("Site Loaded");
+        saveScreenshot(((TakesScreenshot)getDriver()).getScreenshotAs(OutputType.BYTES));
+
+    }
+
+    @AfterClass
+    public void afterClass()
+    {
+        getDriver().quit();
     }
 }

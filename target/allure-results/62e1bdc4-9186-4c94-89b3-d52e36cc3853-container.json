@@ -1,0 +1,1 @@
+{"uuid":"62e1bdc4-9186-4c94-89b3-d52e36cc3853","name":"Tests.Test2TCs","start":1554020726172,"stop":1554020765405,"children":["c81a4bf0-d044-4ab2-8096-0d5c19a1b51e","b1f331a8-41cc-4855-96c5-17b813a61a98"],"afters":[{"name":"afterClass","status":"passed","stage":"finished","description":"","start":1554020764512,"stop":1554020765290}]}

@@ -1,0 +1,7 @@
+PageObjects\Test2PageObjects.class
+PageObjects\Test1PageObjects.class
+Tests\Test1TCs.class
+Pages\Test1Page.class
+Tests\Test2TCs.class
+Pages\Test2Page.class
+Tests\BaseTest.class

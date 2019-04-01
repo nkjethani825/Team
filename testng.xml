@@ -1,7 +1,8 @@
-<suite name="Suite1">
+<suite name="Suite1" parallel="classes">
     <test name="test1">
         <classes>
             <class name="Tests.Test1TCs"/>
+            <class name="Tests.Test2TCs"/>
         </classes>
     </test>
 </suite>
